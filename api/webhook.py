@@ -19,7 +19,7 @@ def add_image():
     group = 'train'
     weight = 1
 
-    image_path = download_image(file_name, image_data)
+    image_path = download_image(file_name, image_data, "jpg")
 
     insert_data(image_path, image_class, group, weight)
 
