@@ -12,8 +12,8 @@ SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
-def download_image(file_name: str, image_data, ext: str):
-    storage_filename = f"age_classifier/{file_name}/{uuid.uuid4()}.{ext}"
+def upload_image(file_name: str, image_data, ext: str):
+    storage_filename = f"age_classifier/{file_name}{uuid.uuid4()}.{ext}"
 
     img_bytes = base64.b64decode(image_data)
     with tempfile.NamedTemporaryFile(suffix=f".{ext}", delete=False) as tmp:
