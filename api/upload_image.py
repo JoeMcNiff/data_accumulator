@@ -1,16 +1,9 @@
-from supabase import create_client
-from dotenv import load_dotenv
-import os
 import uuid
 import base64
 import tempfile
+import os
+from data_accumulator.config import supabase
 
-load_dotenv()
-
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
-
-supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 def upload_image(file_name: str, image_data, ext: str):
     storage_filename = f"age_classifier/{file_name}{uuid.uuid4()}.{ext}"

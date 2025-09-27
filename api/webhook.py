@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from insert_data import insert_data
-from api.upload_image import upload_image
+from data_accumulator.api.insert_data import insert_data
+from data_accumulator.api.upload_image import upload_image
 import os
 
 PORT = int(os.environ.get('PORT', 4000))
@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route("/api/add_image", methods = ['POST'])
 def add_image():
     payload = request.json
-    group = 'train'
+    group = 'TRAIN'
     weight = 1
 
     image_path = upload_image(payload['requestedFilename'], payload['image_base64'], "jpg")
