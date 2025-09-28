@@ -2,6 +2,8 @@ This is the code for a small api server which will take json requests containing
 
 Few things to note:
 
+When making api requests always send it to the url of this app + /api/add_image
+
 Start Command for this app (when deploying on remote server): 
 '''gunicorn api.webhook:app'''
 
