@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from data_accumulator.api.insert_data import insert_data
-from data_accumulator.api.upload_image import upload_image
+from api.insert_data import insert_data
+from api.upload_image import upload_image
 import os
 
 PORT = int(os.environ.get('PORT', 4000))

@@ -1,4 +1,4 @@
-from data_accumulator.config import MANIFEST_TABLE, supabase
+from config import MANIFEST_TABLE, supabase
 
 def insert_data(file_path: str, image_class: str, image_group: str, weight: str):
     manifest_data = {

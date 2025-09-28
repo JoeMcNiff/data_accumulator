@@ -2,7 +2,7 @@ import uuid
 import base64
 import tempfile
 import os
-from data_accumulator.config import supabase
+from config import supabase
 
 
 def upload_image(file_name: str, image_data, ext: str):
