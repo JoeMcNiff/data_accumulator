@@ -18,7 +18,7 @@ def upload_image(file_name: str, image_data, ext: str):
     os.remove(tmp_path)
     
     # return the location of th image
-    return supabase.storage.from_('images').get_public_url(storage_filename)
+    return storage_filename
             
     
     
